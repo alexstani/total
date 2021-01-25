@@ -11,9 +11,8 @@ router.get('/rout',(req,res,next)=>{
 
 router.post('/rout',(req,res,next)=>{
     let newRout = new Rout({
-        mark1:req.body.mark1,
-        mark2:req.body.mark2,
-        total:req.body.total
+       name:req.body.name,
+       mark:req.body.mark
     });
     newRout.save((err,rout)=>{
         if(err){

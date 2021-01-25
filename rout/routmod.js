@@ -1,17 +1,24 @@
 const mongoose = require('mongoose');
 
 const RoutSchema = mongoose.Schema({
-    mark1:{
+
+    name:{
         type:String,
-        required:true
+        required:false
     },
-    mark2:{
-        type:String,
-        required:true
-    },
+    mark:[{
+        mark1:{
+            type:String,
+            required:true
+        },
+        mark2:{
+            type:String,
+            required:true
+        }
+    }],
     total:{
         type:String,
-        required:true
+        required:false
     }
 });
 
